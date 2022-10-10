@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "porfolio-yt-2.0"
+    "name": "portfolio"
   },
   "api": {
-    "projectId": "bxu48zg0",
+    "projectId": "4kgaeg22",
     "dataset": "production"
   },
   "plugins": [

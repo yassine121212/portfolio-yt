@@ -1,10 +1,10 @@
 {
-  "name": "porfolio-yt-20",
+  "name": "portfolio",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Shahzeb Tanweer <shahzeb.tanweer@gmail.com>",
+  "author": "yassine EL_ouazzani <elouazzaniyassine87@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -14,18 +14,22 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.33.3",
-    "@sanity/core": "^2.33.3",
-    "@sanity/default-layout": "^2.33.3",
-    "@sanity/default-login": "^2.33.3",
-    "@sanity/desk-tool": "^2.33.3",
+    "@sanity/base": "^2.34.0",
+    "@sanity/core": "^2.34.0",
+    "@sanity/default-layout": "^2.34.0",
+    "@sanity/default-login": "^2.34.0",
+    "@sanity/desk-tool": "^2.34.0",
     "@sanity/eslint-config-studio": "^2.0.0",
-    "@sanity/vision": "^2.33.3",
+    "@sanity/vision": "^2.34.0",
     "eslint": "^8.6.0",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZestSlash1/portfolio-yt.git"
+  }
 }
