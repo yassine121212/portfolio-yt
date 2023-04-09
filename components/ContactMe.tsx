@@ -24,9 +24,9 @@ export default function ContactMe({}: Props) {
       <h3 className="mt-24 uppercase tracking-[20px] text-gray-500 text-center text-2xl">
         Contact
       </h3>
-      <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
+      <div className="relative z-0 flex flex-col items-center h-screen max-w-full mx-auto overflow-hidden text-left md:flex-row justify-evenly">
         <div className="flex flex-col space-y-10">
-          <h4 className=" text-2xl mx-auto w-[60%] sm:w-full md:text-4xl font-semibold text-center">
+          <h4 className="text-lg lg:text-2xl mx-auto w-[60%] sm:w-full md:text-4xl font-semibold text-center">
             I have got just what you need.{" "}
             <span className="decoration-[#F7AB0A]/50 underline">
               Lets Talk.
@@ -34,27 +34,33 @@ export default function ContactMe({}: Props) {
           </h4>
 
           <div className="space-y-10">
-            <div className="flex items-center space-x-5 justify-center">
+            <div className="flex items-center justify-center space-x-5">
               <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">+212 687007388</p>
+              <p className="text-2xl">
+                +212 687007388
+              </p>
             </div>
 
-            <div className="flex items-center space-x-5 justify-center">
+            <div className="flex items-center justify-center space-x-5">
               <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">elouazzaniyassine87@gmail.com</p>
+              <p className="text-lg lg:text-2xl">
+                elouazzaniyassine87@gmail.com
+              </p>
             </div>
 
-            <div className="flex items-center space-x-5 justify-center">
+            <div className="flex items-center justify-center space-x-5">
               <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-              <p className="text-2xl">Morocco 🇲🇦 - Tanger</p>
+              <p className="text-2xl">
+                Morocco 🇲🇦 - Tanger
+              </p>
             </div>
           </div>
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col space-y-2 w-fit mx-auto"
+            className="flex flex-col px-8 space-y-2 w-fit"
           >
-            <div className="flex space-x-2">
+            <div className="flex flex-col items-center gap-2 md:flex-row justify-content ">
               <input
                 {...register("name")}
                 placeholder="Name"

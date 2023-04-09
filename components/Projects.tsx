@@ -13,17 +13,17 @@ function Projects({ projects }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className="relative z-0 flex flex-col items-center h-screen max-w-full mx-auto overflow-hidden text-left md:flex-row justify-evenly "
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+      <div className="relative mt-8  w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col -space-y-[5cm] items-center justify-center p-20 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col lg:-space-y-[5cm] gap-11 md:gap-0 items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
               initial={{
@@ -35,10 +35,11 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=""
+              className="flex-1 object-cover object-center w-full "
             />
 
-            <div className=" space-y-10 px-0 md:px-10 max-w-6xl -translate-y-24">
-              <h4 className="text-4xl font-semibold text-center">
+            <div className="max-w-6xl px-0 space-y-10 -translate-y-24 md:px-10">
+              <h4 className="text-4xl font-semibold text-center ">
                 <span className="underline decoration-[#F7AB0A]/50">
                   Case Study {i + 1} of{" "}
                   {projects.length}:
@@ -46,11 +47,11 @@ function Projects({ projects }: Props) {
                 {project?.title}
               </h4>
 
-              <div className="flex items-center space-x-2 justify-center">
+              <div className="flex items-center justify-center space-x-2">
                 {project?.technologies.map(
                   (technology) => (
                     <img
-                      className="h-10 w-10"
+                      className="w-10 h-10"
                       key={technology._id}
                       src={urlFor(
                         technology.image
