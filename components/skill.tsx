@@ -10,7 +10,7 @@ type Props = {
 
 function Skill({ skill, directionLeft }: Props) {
   return (
-    <div className="group relative flex cursor-pointer">
+    <div className="relative flex cursor-pointer group">
       <motion.img
         initial={{
           x: directionLeft ? -200 : 200,
@@ -19,11 +19,11 @@ function Skill({ skill, directionLeft }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src={urlFor(skill.image).url()}
-        className="rounded-full border border-gray-500 object-cover h-22 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale grayscale-0 transition duration-300 ease-in-out"
+        className="object-cover w-16 h-16 overflow-hidden transition duration-300 ease-in-out border border-gray-500 rounded-full md:w-28 md:h-28 xl:w-32 xl:h-32 filter group-hover:grayscale grayscale-0"
       />
-      <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:w-32 xl:h-32 rounded-full z-0">
+      <div className="absolute z-0 w-16 h-16 transition duration-300 ease-in-out rounded-full opacity-0 group-hover:opacity-80 group-hover:bg-white md:w-28 md:h-28 xl:w-32 xl:h-32">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">
+          <p className="text-lg font-bold text-black opacity-100 lg:text-3xl">
             {skill.progress}%
           </p>
         </div>
