@@ -25,7 +25,7 @@ function Hero({ pageInfo }: Props) {
       <BackgroundCirlces />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={urlFor(pageInfo?.heroImage).url()}
+        src={urlFor(pageInfo?.heroImage).toString()}
         alt=""
       />
       <div className="z-20">
