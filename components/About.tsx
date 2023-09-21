@@ -32,7 +32,7 @@ function About({ pageInfo }: Props) {
           transition={{ duration: 1.2 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          src={urlFor(pageInfo.profilePic)}
+          src={urlFor(pageInfo.profilePic).url()}
           className=" flex-shrink-0 w-44 h-44 rounded-full md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px] object-cover"
         ></motion.img>
 

@@ -32,7 +32,7 @@ function Projects({ projects }: Props) {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-            src= {urlFor(project?.image).toString()}
+            src= {urlFor(project?.image).url()}
             alt="" 
             />
 
@@ -46,7 +46,7 @@ function Projects({ projects }: Props) {
                   <div className='flex items-center space-x-2 justify-center'>
                 {project?.technologies.map(technology => (
                   <img className='h-10 w-10'
-                  key={technology._id} src={urlFor(technology.image).toString()} alt='' />
+                  key={technology._id} src={urlFor(technology.image).url()} alt='' />
                 ))}
                  </div>
 

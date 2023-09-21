@@ -32,7 +32,7 @@ function Projects({ projects }: Props) {
                   transition={{ duration: 1.2 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-            src= {urlFor(project?.image).toString()}
+            src= {urlFor(project?.image).url()}
             alt="" 
             />
 

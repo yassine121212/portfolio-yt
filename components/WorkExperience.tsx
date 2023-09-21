@@ -70,7 +70,7 @@ const WorkExperience = ({
                 <Image
                   src={urlFor(
                     experiences[0].companyImage
-                  ).toString()}
+                  ).url()}
                   alt="Vitsey"
                   className="object-cover rounded-full ring-red-900 ring-2 "
                   layout="fill"
@@ -113,7 +113,7 @@ const WorkExperience = ({
                 <Image
                   src={urlFor(
                     experiences[1].companyImage
-                  ).toString()}
+                  ).url()}
                   alt="Vitsey"
                   className="object-cover rounded-full "
                   layout="fill"
