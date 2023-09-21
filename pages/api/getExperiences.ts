@@ -15,7 +15,7 @@ const query = groq`
 `;
 
 type Data = {
-  socials: Experience[];
+  experiences: Experience[];
 };
 
 export default async function handler(
