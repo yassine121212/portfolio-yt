@@ -14,13 +14,16 @@ const WorkExperience = ({
   experiences,
 }: Props) => {
   return (
-    <>
-      <motion.div
+    <div className="relative overflow-hidden">
+                <div className="bg-[#ffd37545] h-full min-w-[180%] z-0 absolute bottom-0 right-8 rotate-45	"/>
+
+    <div className="z-10 ">   
+         <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         //   viewport={{ once: true }}
         transition={{ duration: 1.5 }}
-        className="uppercase tracking-[20px] text-gray-500 text-2xl text-center  "
+        className="uppercase tracking-[20px] text-gray-500 text-2xl text-center z-99 "
       >
         <h3 className="uppercase tracking-[10px] md:tracking-[15px] lg:tracking-[20px] text-gray-500 text-2xl pt-20 ">
           Experiences
@@ -34,7 +37,7 @@ const WorkExperience = ({
         whileInView={{ opacity: 1 }}
         //   viewport={{ once: true }}
         transition={{ duration: 1.5 }}
-        className="flex   relative flex-col text-center md:text-left xl:flex-row max-w-[2000px]  xl:px-10 min-h-screen  justify-center xl:space-y-0 mx-auto items-center  "
+        className="flex   relative flex-col text-center md:text-left xl:flex-row max-w-[2000px]  xl:px-10 min-h-screen  justify-center xl:space-y-0 mx-auto items-center  lg:-mt-20"
       >
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
              <div
@@ -85,7 +88,7 @@ const WorkExperience = ({
             key={experiences[1].company}
           >
             <div className="card">
-                              <span className="absolute py-1 px-2  bg-[#D29615] rounded-full top-2 left-2 !z-99 font-bold">2 months</span>
+                              <span className="absolute py-1 px-2  bg-[#D29615] rounded-full top-2 left-2 !z-99 font-bold">3.5 months</span>
 
               <div className="!bg-blue-700 content-box">
                 <span className="card-title ">
@@ -124,7 +127,8 @@ const WorkExperience = ({
           </div>{" "}
         </div>
       </motion.div>
-    </>
+      </div>
+    </div>
   );
 };
 

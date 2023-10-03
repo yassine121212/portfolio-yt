@@ -55,6 +55,7 @@ const Home = ({
         id="experience"
         className=" snap-start"
       >
+     
         <WorkExperience
           experiences={experiences}
         />
@@ -95,29 +96,31 @@ const Home = ({
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<
-  Props
-> = async () => {
-  const pageInfo: PageInfo =
-    await fetchPageInfo();
-  const skills: Skill[] = await fetchSkills();
-  const projects: Project[] =
-    await fetchProjects();
-  const socials: Social[] = await fetchSocial();
-  const experiences: Experience[] =
-    await fetchExperiences();
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const pageInfo: PageInfo = await fetchPageInfo();
+    const skills: Skill[] = await fetchSkills();
+    const projects: Project[] = await fetchProjects();
+    const socials: Social[] = await fetchSocial();
+    const experiences: Experience[] = await fetchExperiences();
 
-  return {
-    props: {
-      pageInfo,
-      skills,
-      projects,
-      socials,
-      experiences,
-    },
-    // Next.js will attempt to re-generate the page:
-    // - When a request comes in
-    // - At most once every 10 seconds
-    revalidate: 10,
-  };
+    return {
+      props: {
+        pageInfo,
+        skills,
+        projects,
+        socials,
+        experiences,
+      },
+      // Next.js will attempt to re-generate the page:
+      // - When a request comes in
+      // - At most once every 10 seconds
+      revalidate: 10,
+    };
+  } catch (error) {
+    console.error("Error fetching data:", error);
+
+    // You can choose to handle the error by providing default data or rethrowing it
+    throw error; // Rethrow the error to halt the build process and log the error
+  }
 };
